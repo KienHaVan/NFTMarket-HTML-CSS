@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button {
+    outline: none;
+    line-height: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+    font-size: 1.4rem;
+    font-family: $primary-font;
+    color: $title-color;
+}

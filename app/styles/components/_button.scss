@@ -1,0 +1,20 @@
+.btn {
+    padding: 1.6rem 2.4rem;
+    color: $text-color;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 600;
+    border: 2px solid $text-color;
+    border-radius: 12px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    border: none;
+    box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
+        inset 4px 4px 4px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+}

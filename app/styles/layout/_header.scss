@@ -1,0 +1,265 @@
+.header {
+    &-top {
+        margin: 4rem 5rem;
+        @include flex(row, space-between, center);
+    }
+    &-logo {
+        @include flex(row, flex-start, center);
+    }
+    & .header-toggle {
+        display: none;
+    }
+    &-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        background-color: white;
+        padding: 20px 25px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transform: translateX(-100%);
+        transition: all 0.25s linear;
+        z-index: 10;
+    }
+    &-menu-item {
+        margin-bottom: 1rem;
+    }
+    &-menu-link {
+        display: block;
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 5px;
+    }
+    &-image {
+        width: 3.4rem;
+        height: 3.4rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-name {
+        font-weight: bold;
+        font-size: 2.4rem;
+        margin-left: 1.8rem;
+    }
+    &-feature {
+        @include flex(row, flex-start, center);
+        gap: 6.4rem;
+        &-item {
+            font-size: 1.6rem;
+            line-height: 20px;
+            color: $text-color;
+        }
+    }
+    &-function {
+        @include flex(row, flex-start, center);
+        gap: 1.6rem;
+    }
+
+    &-content {
+        margin-top: 23rem;
+        // padding-top: 37.5%;
+        background: url("../images/header/bg.png") no-repeat center / cover;
+        @include flex(column, center, center);
+    }
+    &-NFT {
+        display: block;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    &-slogan {
+        margin: 3.5rem auto 5rem;
+        width: 84rem;
+        @include flex(column);
+        font-size: 12rem;
+        font-weight: 600;
+        &-top {
+            align-self: flex-start;
+        }
+        &-bottom {
+            align-self: flex-end;
+        }
+        &-image {
+            display: inline;
+        }
+        &-image--top {
+            margin-left: 8px;
+        }
+        &-image--bottom {
+            margin-right: 1.5rem;
+        }
+    }
+    &-desc {
+        display: block;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 150%;
+    }
+
+    &-search {
+        width: 65rem;
+        margin-top: 5.5rem;
+        @include flex(row, flex-end, center);
+        background-color: white;
+        box-shadow: 0px 25px 75px rgba(6, 7, 20, 0.1);
+        border-radius: 16px;
+        padding: 2.7rem 3.2rem;
+        &-icon {
+            font-size: 2.4rem;
+            transform: rotate(90deg);
+            color: #2a27c9;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        &-category {
+            margin-right: 4.8rem;
+            padding-left: 1.6rem;
+            border-left: 1px solid #1f2a47;
+            opacity: 0.25;
+            cursor: pointer;
+            span {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+            i {
+                margin-left: 6.4rem;
+            }
+        }
+        &-input {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            border: none;
+            flex: 1;
+            padding-right: 1rem;
+        }
+    }
+    &-branch {
+        margin-top: 22rem;
+    }
+    @include maxWidth(1023px) {
+        &-feature {
+            display: none;
+        }
+        .contact-btn {
+            display: none;
+        }
+        &-content {
+            margin-top: 10rem;
+        }
+        &-slogan {
+            margin: 1.5rem auto 1rem;
+            width: 56rem;
+            font-size: 8rem;
+            &-image--top {
+                width: 2.4rem;
+            }
+            &-image--bottom {
+                width: 42px;
+                margin-right: 1rem;
+            }
+        }
+        &-branch {
+            margin-top: 6rem;
+        }
+        &-search {
+            width: 50rem;
+            margin-top: 3.5rem;
+            padding: 1.7rem 2.2rem;
+        }
+        &-search-category {
+            margin-right: 2.8rem;
+        }
+        &-search-category i {
+            margin-left: 1.4rem;
+        }
+        &-branch img {
+            display: block;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        & .header-toggle {
+            display: block;
+            font-size: 3rem;
+            cursor: pointer;
+            margin-right: 2rem;
+        }
+        &-menu.is-expand {
+            // transform: translateX(0);
+        }
+    }
+    @include maxWidth(767px) {
+        &-top {
+            margin: 2rem 1rem;
+        }
+        & .header-function-btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+        &-content {
+            margin-top: 3rem;
+        }
+        &-image {
+            width: 3rem;
+            height: 3rem;
+        }
+        &-name {
+            margin-left: 4px;
+        }
+        &-slogan {
+            width: 28rem;
+            font-size: 4rem;
+        }
+        &-NFT {
+            font-size: 8px;
+        }
+        &-slogan {
+            margin: 6px auto 1rem;
+            &-image--top {
+                width: 1.2rem;
+                margin-left: 4px;
+            }
+            &-image--bottom {
+                width: 26px;
+                margin-right: 0.6rem;
+            }
+        }
+        &-desc {
+            font-size: 16px;
+        }
+        &-search {
+            margin-top: 2rem;
+            width: 35rem;
+            padding: 1rem;
+            &-icon {
+                font-size: 2rem;
+            }
+            &-category {
+                flex-shrink: 0;
+                padding-left: 0.6rem;
+                margin-right: 10px;
+                span {
+                }
+                i {
+                    margin-left: 5px;
+                }
+            }
+            &-input {
+                overflow: hidden;
+            }
+        }
+        &-branch {
+            margin-top: 4rem;
+        }
+    }
+}
+::placeholder {
+    opacity: 0.25;
+}
