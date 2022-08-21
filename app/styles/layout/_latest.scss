@@ -1,0 +1,112 @@
+.latest {
+    margin-top: 15rem;
+    &-heading {
+        display: block;
+        text-align: center;
+        font-size: 3.6rem;
+        line-height: 4.5rem;
+    }
+    &-list {
+        @include flex(row, flex-start, stretch);
+        flex-wrap: wrap;
+        margin-left: -2.4rem;
+        overflow-x: hidden;
+    }
+    &-item {
+        width: calc(25% - 2.4rem);
+        margin-left: 2.4rem;
+        margin-top: 7rem;
+        padding: 2.4rem;
+        border-radius: 2rem;
+    }
+    &-image {
+        width: 100%;
+        height: 52rem;
+        border-radius: 2rem;
+        margin-bottom: 2.6rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
+        }
+    }
+    &-content {
+        @include flex(row, space-between, center);
+    }
+    &-title {
+        font-size: 2rem;
+        @include textClamp(2);
+    }
+    &-price {
+        padding: 8px 14px;
+        background: rgba(42, 39, 201, 0.1);
+        border-radius: 4px;
+        font-size: 1.6rem;
+        text-align: center;
+        color: $primary-color;
+        flex-shrink: 0;
+    }
+    &-time {
+        margin-top: 2.4rem;
+        @include flex(row, flex-start, center);
+        padding-bottom: 2.8rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $border-grey-color;
+        &-icon {
+            font-size: 2rem;
+            margin-right: 8px;
+        }
+        &-left {
+            line-height: 1.5;
+            color: $title-color;
+        }
+    }
+    &-social {
+        @include flex(row, flex-start, center);
+        &-images {
+            @include flex(row, flex-start, center);
+            margin-right: 1.6rem;
+        }
+        &-image:not(:first-child) {
+            margin-left: -12px;
+        }
+        &-people {
+            line-height: 1.5;
+        }
+        &-vote {
+            @include flex(row, flex-start, center);
+            margin-left: auto;
+            gap: 8px;
+            i {
+                font-size: 2rem;
+                color: $text-color;
+            }
+            i.is-liked {
+                color: red;
+            }
+        }
+    }
+    @include maxWidth(1280px) {
+        &-list {
+            padding: 0 2.4rem;
+        }
+        &-item {
+            padding: 0;
+        }
+        &-item {
+            width: calc(33.33% - 2.4rem);
+        }
+    }
+    @include maxWidth(1023px) {
+        &-item {
+            width: calc(50% - 2.4rem);
+        }
+    }
+    @include maxWidth(767px) {
+        &-item {
+            width: 100%;
+        }
+        margin-top: 7rem;
+    }
+}

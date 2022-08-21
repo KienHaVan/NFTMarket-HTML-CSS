@@ -1,1 +1,1 @@
-"use strict";
+"use strict";const $=document.querySelector.bind(document),$$=document.querySelectorAll.bind(document),headerToggle=$(".header-toggle"),headerMenu=$(".header-menu");console.log(headerToggle,headerMenu),headerToggle.addEventListener("click",()=>{headerMenu.classList.add("is-expand")}),window.addEventListener("click",e=>{headerMenu.contains(e.target)||e.target.matches(".header-toggle")||headerMenu.classList.remove("is-expand")}),$(document).ready(function(){$(".latest-list").slick()});

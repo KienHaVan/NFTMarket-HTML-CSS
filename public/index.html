@@ -12,26 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="home-page">
     <div class="wrapper">
       <div class="header"> 
         <div class="header-top"> 
           <div class="header-logo"> <i class="fa fa-bars header-toggle"></i>
-            <ul class="header-menu is-expand">
+            <ul class="header-menu">
               <li class="header-menu-item"> <a class="header-menu-link title" href="#">Auctions</a></li>
               <li class="header-menu-item"> <a class="header-menu-link title" href="#">Roadmap</a></li>
               <li class="header-menu-item"> <a class="header-menu-link title" href="#">Discovery</a></li>
               <li class="header-menu-item"> <a class="header-menu-link title" href="#">Community</a></li>
               <li class="header-menu-item"> <a class="header-menu-link title" href="#">Contact</a></li>
             </ul>
-            <div class="header-image"> <img src="../images/header/logo.png" alt=""></div>
+            <div class="header-image"> <img src="../images/header-logo.png" alt=""></div>
             <h3 class="title header-name">NFT Market</h3>
           </div>
           <div class="header-feature"> <a class="title header-feature-item" href="#">Auctions  </a><a class="title header-feature-item" href="#">Roadmap  </a><a class="title header-feature-item" href="#">Discovery   </a><a class="title header-feature-item" href="#">Community</a></div>
@@ -43,18 +45,128 @@
         <div class="header-content"> 
           <h3 class="header-NFT text">Non Fungible Tokens </h3>
           <div class="header-slogan title"> 
-            <div class="header-slogan-top"> <span>A new NFT</span><img class="header-slogan-image header-slogan-image--top" src="../images/header/frame.png" alt=""></div>
-            <div class="header-slogan-bottom"> <img class="header-slogan-image header-slogan-image--bottom" src="../images/header/frame2.png" alt=""><span>Experience</span></div>
+            <div class="header-slogan-top"> <span>A new NFT</span><img class="header-slogan-image header-slogan-image--top" src="../images/header-frame.png" alt=""></div>
+            <div class="header-slogan-bottom"> <img class="header-slogan-image header-slogan-image--bottom" src="../images/header-frame2.png" alt=""><span>Experience</span></div>
           </div>
           <h3 class="header-desc text">Discover, collect and sell </h3>
           <div class="header-search"> 
             <input class="header-search-input text" type="text" placeholder="Items, collections and creators">
             <h4 class="header-search-category"> <span class="text">Category </span><i class="fa fa-angle-down"></i></h4><i class="fa fa-search header-search-icon"></i>
           </div>
-          <div class="header-branch"> <img src="../images/header/branch.png" alt=""></div>
+          <div class="header-branch"> <img src="../images/header-branch.png" alt=""></div>
+        </div>
+      </div>
+      <div class="latest">
+        <h2 class="title latest-heading">Latest live auctions</h2>
+        <div class="latest-list"> 
+          <div class="latest-item"> 
+            <div class="latest-image"> <img src="./images/lastest-Itemproduct1.png"/></div>
+            <div class="latest-content"> 
+              <h2 class="title latest-title">Vulputate felis purus viverra morbi</h2>
+              <h3 class="title latest-price">3.19 ETH</h3>
+            </div>
+            <div class="text latest-time"><i class="fa fa-stopwatch latest-time-icon"> </i>
+              <h4 class="text latest-time-left">2:41 mins left</h4>
+            </div>
+            <div class="latest-social"> 
+              <div class="latest-social-images"> 
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people1.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people2.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people3.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people4.png"/></div>
+              </div>
+              <h4 class="text latest-social-people">35 people are bidding</h4>
+              <div class="latest-social-vote"><i class="fa fa-heart is-liked"></i>
+                <h4 class="text latest-social-number">120</h4>
+              </div>
+            </div>
+          </div>
+          <div class="latest-item"> 
+            <div class="latest-image"> <img src="./images/lastest-Itemproduct2.png"/></div>
+            <div class="latest-content"> 
+              <h2 class="title latest-title">Vulputate felis purus viverra morbi</h2>
+              <h3 class="title latest-price">3.19 ETH</h3>
+            </div>
+            <div class="text latest-time"><i class="fa fa-stopwatch latest-time-icon"> </i>
+              <h4 class="text latest-time-left">2:41 mins left</h4>
+            </div>
+            <div class="latest-social"> 
+              <div class="latest-social-images"> 
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people1.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people2.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people3.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people4.png"/></div>
+              </div>
+              <h4 class="text latest-social-people">35 people are bidding</h4>
+              <div class="latest-social-vote"><i class="fa fa-heart is-liked"></i>
+                <h4 class="text latest-social-number">120</h4>
+              </div>
+            </div>
+          </div>
+          <div class="latest-item"> 
+            <div class="latest-image"> <img src="./images/lastest-Itemproduct3.png"/></div>
+            <div class="latest-content"> 
+              <h2 class="title latest-title">Vulputate felis purus viverra morbi</h2>
+              <h3 class="title latest-price">3.19 ETH</h3>
+            </div>
+            <div class="text latest-time"><i class="fa fa-stopwatch latest-time-icon"> </i>
+              <h4 class="text latest-time-left">2:41 mins left</h4>
+            </div>
+            <div class="latest-social"> 
+              <div class="latest-social-images"> 
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people1.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people2.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people3.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people4.png"/></div>
+              </div>
+              <h4 class="text latest-social-people">35 people are bidding</h4>
+              <div class="latest-social-vote"><i class="fa fa-heart is-liked"></i>
+                <h4 class="text latest-social-number">120</h4>
+              </div>
+            </div>
+          </div>
+          <div class="latest-item"> 
+            <div class="latest-image"> <img src="./images/lastest-Itemproduct4.png"/></div>
+            <div class="latest-content"> 
+              <h2 class="title latest-title">Vulputate felis purus viverra morbi</h2>
+              <h3 class="title latest-price">3.19 ETH</h3>
+            </div>
+            <div class="text latest-time"><i class="fa fa-stopwatch latest-time-icon"> </i>
+              <h4 class="text latest-time-left">2:41 mins left</h4>
+            </div>
+            <div class="latest-social"> 
+              <div class="latest-social-images"> 
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people1.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people2.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people3.png"/></div>
+                <div class="latest-social-image"> <img src="./images/lastest-product1-people4.png"/></div>
+              </div>
+              <h4 class="text latest-social-people">35 people are bidding</h4>
+              <div class="latest-social-vote"><i class="fa fa-heart is-liked"></i>
+                <h4 class="text latest-social-number">120</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sapien"> 
+        <div class="container sapien-container">
+          <div class="sapien-left"> 
+            <p class="text sapien-heading">overline </p>
+            <h2 class="title sapien-title">Sapien ipsum scelerisque convallis fusce</h2>
+            <p class="text sapien-desc">Ut amet vulputate faucibus vitae semper eget auctor. Diam tempor pulvinar ultricies dolor feugiat aliquam commodo.</p>
+            <div class="sapien-buttons"> 
+              <button class="btn btn-primary">Get started </button>
+              <button class="btn">Learn More </button>
+            </div>
+          </div>
+          <div class="sapien-right"> <img src="./images/sapien.png" alt=""></div>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
