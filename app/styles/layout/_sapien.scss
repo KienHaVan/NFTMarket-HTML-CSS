@@ -35,7 +35,7 @@
         width: calc(50% - 8px);
     }
     @include maxWidth(1439px) {
-        padding-left: 2.4rem;
+        padding: 2.4rem;
         margin-top: 10rem;
     }
     @include maxWidth(1023px) {
