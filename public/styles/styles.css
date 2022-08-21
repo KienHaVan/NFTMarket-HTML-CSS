@@ -726,6 +726,7 @@ body {
 @media only screen and (max-width: 767px) {
   .sapien {
     margin-top: 4rem;
+    padding: 1rem;
   }
   .sapien-title {
     font-size: 4rem;

@@ -49,6 +49,7 @@
     }
     @include maxWidth(767px) {
         margin-top: 4rem;
+        padding: 1rem;
         &-title {
             font-size: 4rem;
         }
