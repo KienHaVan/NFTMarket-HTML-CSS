@@ -1773,6 +1773,11 @@ body {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 1440px) {
+  .product-container {
+    margin-bottom: 100px;
+  }
+}
 @media only screen and (max-width: 1023px) {
   .product-container {
     display: block;
@@ -1822,6 +1827,25 @@ body {
   }
   .product-bidding-container {
     gap: 8px;
+  }
+}
+
+.more-wrapper {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 150px;
+}
+.more-content {
+  margin-top: 72px;
+}
+@media only screen and (max-width: 1440px) {
+  .more-wrapper {
+    margin-bottom: 100px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .more-wrapper {
+    margin-bottom: 50px;
   }
 }
 

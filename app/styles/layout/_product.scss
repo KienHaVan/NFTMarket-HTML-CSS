@@ -140,6 +140,11 @@
             margin-bottom: 20px;
         }
     }
+    @include maxWidth(1440px) {
+        &-container {
+            margin-bottom: 100px;
+        }
+    }
     @include maxWidth(1023px) {
         &-container {
             display: block;

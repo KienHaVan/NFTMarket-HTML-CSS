@@ -1,0 +1,20 @@
+.more {
+    &-wrapper {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 150px;
+    }
+    &-content {
+        margin-top: 72px;
+    }
+    @include maxWidth(1440px) {
+        &-wrapper {
+            margin-bottom: 100px;
+        }
+    }
+    @include maxWidth(1023px) {
+        &-wrapper {
+            margin-bottom: 50px;
+        }
+    }
+}
