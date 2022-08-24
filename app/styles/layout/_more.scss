@@ -17,4 +17,9 @@
             margin-bottom: 50px;
         }
     }
+    @include maxWidth(767px) {
+        &-content {
+            margin-top: 16px;
+        }
+    }
 }
