@@ -87,6 +87,7 @@
             overflow-y: auto;
             margin-bottom: 6rem;
             border-radius: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
         &-btn {
             width: 100%;
@@ -118,7 +119,7 @@
                 margin: 2rem;
             }
             &-container {
-                // padding-left: 3px;
+                padding-left: 3px;
             }
             &-list {
                 margin: -2rem;
@@ -132,7 +133,7 @@
             }
         }
         &-right {
-            padding: 2rem;
+            padding: 1rem;
             &-title {
                 margin-bottom: 26px;
             }

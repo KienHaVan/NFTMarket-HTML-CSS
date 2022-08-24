@@ -1066,6 +1066,8 @@ body {
   overflow-y: auto;
   margin-bottom: 6rem;
   border-radius: 20px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .hottest-right-btn {
   width: 100%;
@@ -1098,6 +1100,9 @@ body {
   .hottest-left-wrapper {
     margin: 2rem;
   }
+  .hottest-left-container {
+    padding-left: 3px;
+  }
   .hottest-left-list {
     margin: -2rem;
   }
@@ -1109,7 +1114,7 @@ body {
     margin: 2rem;
   }
   .hottest-right {
-    padding: 2rem;
+    padding: 1rem;
   }
   .hottest-right-title {
     margin-bottom: 26px;
