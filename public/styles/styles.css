@@ -1102,6 +1102,7 @@ body {
   }
   .hottest-left-container {
     padding-left: 3px;
+    padding-right: 3px;
   }
   .hottest-left-list {
     margin: -2rem;
