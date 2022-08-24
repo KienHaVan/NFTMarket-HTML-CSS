@@ -14,30 +14,45 @@ mixin img(src, alt)
 	else
 		img(src=src, alt=alt)&attributes(attributes)
 
-mixin latestItem(src="./images/lastest-Itemproduct1.png", title= "Vulputate felis purus viverra morbi", price="3.19 ETH", time="2:41 mins left", people1="./images/lastest-product1-people1.png", people2="./images/lastest-product1-people2.png", people3="./images/lastest-product1-people3.png", people4="./images/lastest-product1-people4.png", social="35 people are bidding", iconLiked = true ,number="120")
-	.latest-item 
-		.latest-image 
+mixin socialPeople(people1="./images/lastest-product1-people1.png", people2="./images/lastest-product1-people2.png", people3="./images/lastest-product1-people3.png", people4="./images/lastest-product1-people4.png") 
+	.main-social-images 
+		.main-social-image 
+			img(src=people1) 
+		.main-social-image 
+			img(src=people2) 
+		.main-social-image 
+			img(src=people3) 
+		.main-social-image 
+			img(src=people4) 
+
+mixin mainItem(isItemFlex = false, src="./images/lastest-Itemproduct1.png", title= "Vulputate felis purus viverra morbi", isPriceUp = true, price="3.19 ETH", time="2:41 mins left", social="35 people are bidding", iconLiked = true, number)
+	.main-item(class= isItemFlex ? "isItemFlex" : "")
+		.main-image 
 			img(src=src)
-		.latest-content 
-			h2.title.latest-title= title 
-			h3.title.latest-price= price 
-		.text.latest-time
-			i.fa.fa-stopwatch.latest-time-icon 
-			h4.text.latest-time-left= time   
-		.latest-social 
-			.latest-social-images 
-				.latest-social-image 
-					img(src=people1) 
-				.latest-social-image 
-					img(src=people2) 
-				.latest-social-image 
-					img(src=people3) 
-				.latest-social-image 
-					img(src=people4) 
-			h4.text.latest-social-people=social 
-			.latest-social-vote
-				if iconLiked == false 
-					i.fa-regular.fa-heart 
-				else 
-					i.fa.fa-heart.is-liked
-				h4.text.latest-social-number=number
+		.main-content-container 
+			if isPriceUp === true 
+				.main-content 
+					h2.title.main-title= title 
+					h3.title.main-price= price 
+				.text.main-time
+					i.fa.fa-stopwatch.main-time-icon 
+					h4.text.main-time-left= time
+			else 
+				.main-content(class= isPriceUp ? "" : "isPriceDown")
+					h2.title.main-title= title 
+				.main-sub-content 
+					h3.title.main-price= price 
+					.text.main-time
+						i.fa.fa-stopwatch.main-time-icon 
+						h4.text.main-time-left= time
+			.main-social(class= isPriceUp ? "" : "isPriceDown")
+				if block 
+					block  
+				h4.text.main-social-people=social 
+				.main-social-vote
+					if iconLiked == false 
+						i.fa-regular.fa-heart 
+					else 
+						i.fa.fa-heart.is-liked
+					if number 
+						h4.text.main-social-number=number

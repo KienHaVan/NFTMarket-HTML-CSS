@@ -6,3 +6,213 @@
     max-width: $container;
     margin: 0 auto;
 }
+
+.main {
+    margin-top: 15rem;
+    &-item {
+        display: block;
+        border-radius: 2rem;
+    }
+    &-item.isItemFlex {
+        @include flex(row, space-between, stretch);
+        margin-bottom: 1.6rem;
+        gap: 16px;
+        .main-image {
+            width: 12rem;
+            height: 12rem;
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1;
+            }
+        }
+        .main-content {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .main-social {
+            padding-top: 0;
+            margin-top: 1.6rem;
+            border-top: none;
+        }
+    }
+    &-image {
+        // width: 100%;
+        height: 52rem;
+        border-radius: 2rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
+        }
+    }
+    &-content {
+        @include flex(row, space-between, center);
+        margin: 2.4rem 0;
+        gap: 2.5rem;
+    }
+    &-content.isPriceDown {
+        margin: 1.6rem 0;
+    }
+    &-title {
+        font-size: 2rem;
+        @include textClamp(2);
+        text-align: left;
+    }
+    &-sub-content {
+        @include flex(row-reverse, space-between, center);
+    }
+    &-price {
+        padding: 8px 14px;
+        background: rgba(42, 39, 201, 0.1);
+        border-radius: 4px;
+        font-size: 1.6rem;
+        text-align: center;
+        color: $primary-color;
+        flex-shrink: 0;
+    }
+    &-time {
+        @include flex(row, flex-start, center);
+
+        &-icon {
+            font-size: 2rem;
+            margin-right: 8px;
+        }
+        &-left {
+            line-height: 1.5;
+            color: $title-color;
+            font-size: 14px;
+        }
+    }
+    &-social {
+        padding-top: 2rem;
+        margin-top: 2.8rem;
+        border-top: 1px solid $border-grey-color;
+        @include flex(row, flex-start, center);
+        &-images {
+            @include flex(row, flex-start, center);
+            margin-right: 1.6rem;
+        }
+        &-image:not(:first-child) {
+            margin-left: -12px;
+        }
+        &-people {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        &-number {
+            font-size: 14px;
+        }
+        &-vote {
+            @include flex(row, flex-start, center);
+            margin-left: auto;
+            gap: 8px;
+            i {
+                font-size: 2rem;
+                color: $text-color;
+            }
+            i.is-liked {
+                color: red;
+            }
+        }
+    }
+    &-social.isPriceDown {
+        padding-top: 1.2rem;
+        margin-top: 1.6rem;
+    }
+    @include maxWidth(1440px) {
+        &-social-images {
+            margin-right: 0;
+        }
+    }
+    @include maxWidth(767px) {
+        &-social-images {
+            margin-right: 1rem;
+        }
+    }
+}
+.slick-prev {
+    left: 1rem;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(white, 0.8);
+}
+.slick-prev:hover {
+    background-color: rgba(white, 0.8);
+    z-index: 1000;
+}
+.slick-prev i {
+    font-size: 30px;
+    color: $title-color;
+}
+.slick-prev::before {
+    font-size: 0;
+}
+
+.slick-next {
+    right: 1rem;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(white, 0.8);
+}
+.slick-next:hover {
+    background-color: rgba(white, 0.8);
+    z-index: 1000;
+}
+.slick-next i {
+    font-size: 30px;
+    color: $title-color;
+}
+.slick-next::before {
+    font-size: 0;
+}
+
+.slick-initialized .slick-slide {
+    max-width: 45rem !important;
+}
+
+@include maxWidth(1023px) {
+    .slick-next,
+    .slick-prev {
+        width: 50px;
+        height: 50px;
+        // background-color: transparent;
+    }
+    // .slick-next:hover,
+    // .slick-prev:hover {
+    //     background-color: transparent;
+    // }
+    // .slick-next i,
+    // .slick-prev i {
+    //     color: white;
+    // }
+    .slick-prev {
+        left: 1rem;
+    }
+}
+@include maxWidth(767px) {
+    .slick-next,
+    .slick-prev {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+    }
+    .slick-next:hover,
+    .slick-prev:hover {
+        background-color: transparent;
+    }
+    .slick-next i,
+    .slick-prev i {
+        color: white;
+    }
+    .slick-prev {
+        left: 1rem;
+    }
+}

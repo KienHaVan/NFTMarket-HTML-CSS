@@ -1,0 +1,141 @@
+.hottest {
+    margin-bottom: 10rem;
+    max-width: 100%;
+    &-container {
+        @include flex(row, space-between, stretch);
+        flex-wrap: wrap;
+    }
+    margin-left: -24px;
+    &-left,
+    &-center,
+    &-right {
+        width: calc(33.33% - 24px);
+        margin-left: 24px;
+        max-height: 100rem;
+    }
+    &-left {
+        border: 1px solid #e2e2ed;
+        border-radius: 2rem;
+        @include flex(column, space-between);
+        &-wrapper {
+            margin: 4rem;
+        }
+        &-list {
+            margin: -4rem;
+            margin-bottom: 6rem;
+            overflow: hidden;
+        }
+        &-container {
+            padding-left: 2rem;
+        }
+        &-title {
+            font-size: 3.2rem;
+            line-height: 4rem;
+            margin-bottom: 5.6rem;
+        }
+        &-btn {
+            margin: 0 4rem 4rem 4rem;
+        }
+    }
+    &-center {
+        @include flex(column, stretch);
+        border-radius: 2rem;
+        background-color: black;
+        &-image {
+            flex-shrink: 0;
+            border-radius: 2rem 2rem 0 0;
+            img {
+                border-radius: inherit;
+            }
+        }
+        &-content {
+            margin: 4rem;
+            flex: 1;
+            @include flex(column, stretch, flex-start);
+        }
+        &-title {
+            margin: 1.2rem 0 0.8rem;
+            font-size: 2.4rem;
+            line-height: 1.25;
+            color: white;
+            width: 30rem;
+        }
+        &-desc {
+            width: 30rem;
+            line-height: 1.5;
+            margin-bottom: 3.8rem;
+        }
+        &-btn {
+            margin-top: auto;
+            width: 100%;
+        }
+    }
+    &-right {
+        border: 1px solid #e2e2ed;
+        border-radius: 2rem;
+        padding: 4rem;
+        @include flex(column, stretch, center);
+        max-height: 100rem;
+        &-title {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 4rem;
+            margin-bottom: 56px;
+        }
+        &-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 6rem;
+            border-radius: 20px;
+        }
+        &-btn {
+            width: 100%;
+            margin-top: auto;
+        }
+    }
+    @include maxWidth(1023px) {
+        margin-left: 0;
+        &-left,
+        &-center,
+        &-right {
+            width: 94%;
+            margin-left: 0;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        &-center {
+            align-items: center;
+            &-title {
+                width: unset;
+            }
+        }
+    }
+    @include maxWidth(767px) {
+        margin-bottom: 0;
+        &-left {
+            &-wrapper {
+                margin: 2rem;
+            }
+            &-container {
+                padding-left: 3px;
+            }
+            &-list {
+                margin: -2rem;
+            }
+            &-item {
+                width: 100%;
+                max-width: 36rem;
+            }
+            &-btn {
+                margin: 2rem;
+            }
+        }
+        &-right {
+            padding: 2rem;
+            &-title {
+                margin-bottom: 26px;
+            }
+        }
+    }
+}

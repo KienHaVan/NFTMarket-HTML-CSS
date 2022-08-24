@@ -1,0 +1,121 @@
+.footer {
+    margin-bottom: 10rem;
+    &-container {
+        @include flex(row, space-between, stretch);
+    }
+    &-left,
+    &-center,
+    &-right {
+        flex: 1;
+    }
+    &-left {
+        border: 1px solid #e2e2ed;
+        border-radius: 20px 0px 0px 20px;
+        padding: 48px;
+        @include flex(column, space-between, flex-start);
+        gap: 48px;
+        &-logo {
+            @include flex(row, flex-start, center);
+            gap: 18px;
+        }
+        &-image {
+            width: 32px;
+            height: 32px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-title {
+            font-size: 32px;
+        }
+        &-helpers {
+            @include flex(row, flex-start, flex-end);
+            gap: 4rem;
+            flex: 1;
+            margin-top: auto;
+        }
+        &-helper {
+            line-height: 1.5;
+        }
+    }
+    &-center {
+        padding: 4.8rem;
+        border: 1px solid #e2e2ed;
+        &-menu {
+            @include flex(column, flex-start, flex-start);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        &-item {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &-social {
+            margin-top: 70px;
+            @include flex;
+            gap: 25px;
+            i {
+                aspect-ratio: 1;
+                font-size: 20px;
+            }
+        }
+    }
+    &-right {
+        border: 1px solid #e2e2ed;
+        border-radius: 0px 20px 20px 0px;
+        padding: 48px;
+        @include flex(column, space-between, center);
+        &-content {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+        &-sign {
+            background-color: white;
+            &-input {
+                box-shadow: 0px 25px 75px rgba(6, 7, 20, 0.1);
+                border-radius: 16px 0 0 16px;
+                border: none;
+                background-color: #fff;
+                height: 100%;
+                padding: 10px;
+            }
+            & &-btn {
+                // box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
+                //     inset 4px 4px 4px rgba(255, 255, 255, 0.1);
+                border-radius: 0 16px 16px 0;
+                border: none;
+                font-family: $primary-font;
+                font-size: 16px;
+                line-height: 20px;
+                color: $primary-color;
+                background-color: #fff;
+                box-shadow: none;
+            }
+        }
+    }
+    @include maxWidth(1440px) {
+        padding: 10px;
+    }
+    @include maxWidth(1280px) {
+        &-container {
+            display: block;
+        }
+        &-left {
+            border-radius: 20px 20px 0 0;
+        }
+        &-center {
+            border-radius: 0;
+        }
+        &-right {
+            border-radius: 0 0 20px 20px;
+        }
+    }
+    @include maxWidth(767px) {
+        &-right {
+            padding: 30px;
+        }
+    }
+}

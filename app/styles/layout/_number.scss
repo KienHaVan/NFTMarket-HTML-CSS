@@ -1,0 +1,32 @@
+.number {
+    &-container {
+        @include flex(row, center, stretch);
+        gap: 100px;
+    }
+    &-item {
+        @include flex(column, center, center);
+    }
+    &-icon {
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+    &-count {
+        font-size: 48px;
+        line-height: 1.15;
+    }
+    &-content {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    @include maxWidth(1023px) {
+        &-container {
+            gap: 60px;
+        }
+    }
+    @include maxWidth(767px) {
+        &-container {
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+    }
+}
