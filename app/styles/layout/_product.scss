@@ -1,0 +1,179 @@
+.product {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    &-container {
+        margin-top: 100px;
+        @include flex(row, space-between, center);
+        gap: 94px;
+        border: 1px solid #e2e2ed;
+        border-radius: 20px;
+        margin-bottom: 150px;
+        position: relative;
+        padding: 24px;
+    }
+    &-social {
+        @include flex(column, center, center);
+        gap: 16px;
+        z-index: 10;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        transform: translateX(50%);
+
+        &-container {
+            cursor: pointer;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 1px solid #e2e2ed;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    &-image {
+        flex-shrink: 0;
+        border-radius: inherit;
+        position: relative;
+        &-maximize {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                color: black;
+                font-size: 24px;
+            }
+        }
+    }
+    &-content {
+        @include flex(column, flex-start, flex-start);
+    }
+    &-heading {
+        font-size: 40px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+    &-desc {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 28px;
+    }
+    &-info {
+        // align-self: flex-start;
+        @include flex(row, flex-start, center);
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+    &-author,
+    &-collection {
+        @include flex(row, flex-start, center);
+        gap: 18px;
+        &-image {
+            width: 40px;
+            height: 40px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-info {
+            p {
+                line-height: 1.5;
+            }
+        }
+    }
+    &-bidding {
+        background-color: $background-grey-color;
+        border-radius: 20px;
+        padding: 32px 40px;
+        @include flex(column, space-between, flex-start);
+        &-container {
+            @include flex(row, flex-start, flex-start);
+            gap: 56px;
+        }
+        &-text {
+            line-height: 1.5;
+        }
+        &-left {
+            h3 {
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 56px;
+            }
+            span {
+                font-size: 24px;
+            }
+        }
+        &-right {
+            h4 {
+                margin-top: 14px;
+                font-size: 24px;
+            }
+            h5 {
+                margin-top: 5px;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+        &-button {
+            margin-top: 34px;
+            width: 100%;
+        }
+    }
+    &-chart {
+        margin-top: 40px;
+        &-heading {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    }
+    @include maxWidth(1023px) {
+        &-container {
+            display: block;
+            margin-bottom: 40px;
+        }
+        &-image {
+            margin-bottom: 2rem;
+        }
+        &-content {
+            @include flex(column, flex-start, center);
+        }
+    }
+    @include maxWidth(767px) {
+        margin-left: 0;
+        margin-right: 0;
+        &-container {
+            padding: 10px;
+            margin-top: 40px;
+        }
+        &-social {
+            transform: translateX(-50%);
+            top: 25px;
+        }
+        &-image-maximize {
+            bottom: 10px;
+        }
+        &-heading {
+            font-size: 30px;
+        }
+        &-bidding {
+            padding: 16px;
+            &-container {
+                gap: 8px;
+            }
+        }
+    }
+}

@@ -114,6 +114,9 @@
         }
     }
     @include maxWidth(767px) {
+        &-left {
+            padding: 30px;
+        }
         &-right {
             padding: 16px;
         }
